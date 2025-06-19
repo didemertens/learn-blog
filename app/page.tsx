@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
+  const [count, setCount] = useState(0);
+  
   const users = [
     { id: 1, name: "John" },
     { id: 2, name: "Jane" },
@@ -10,16 +12,10 @@ export default function Home() {
 
   const shouldShow = true;
 
-
-  if (shouldShow) {
-    const [count, setCount] = useState(0);
-  }
-
-
   return (
     <ul>
     {users.map(user => (
-      <li>{user.name}</li>
+      <li key={user.id}>{user.name}</li>
     ))}
   </ul>
   );
