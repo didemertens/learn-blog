@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
   const users = [
@@ -6,6 +7,14 @@ export default function Home() {
     { id: 2, name: "Jane" },
     { id: 3, name: "Jim" },
   ];
+
+  const shouldShow = true;
+
+
+  if (shouldShow) {
+    const [count, setCount] = useState(0);
+  }
+
 
   return (
     <ul>
